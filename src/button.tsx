@@ -7,7 +7,7 @@ export const Button = ({
   onClick = () => { }
 }) => {
   return (
-    <button onClick={onClick} className="button-50" role="button">Button 50</button>
+    <button onClick={onClick} className="button-50" role="button">{children}</button>
     // <button onClick={onClick} style={{
     //   "--edge-color-middle": mixColors(color, '#000000', 0.3),
     //   "--edge-color-end": mixColors(color, '#000000', 0.5),

@@ -97,7 +97,7 @@ export const Running2dGoobers = (canvas: HTMLCanvasElement) => {
   const squares: Square[] = [];
 
 
-  const numSquares = 10;
+  const numSquares = 50;
   const squareSize = gridSize;
 
   for (let i = 0; i < numSquares; i++) {
