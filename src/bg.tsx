@@ -1,6 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Random } from '../../../server/common/rand.ts';
-import { Noise } from '../../../server/lib/noise/index.ts';
+// import { Random } from '../../../server/common/rand.ts';
+// import { Noise } from '../../../server/lib/noise/index.ts';
+
+function getRandomInt(max: number) {
+  return Math.floor(Math.random() * max);
+}
+
 
 export const Running2dGoobers = (canvas: HTMLCanvasElement) => {
   const ctx = canvas.getContext('2d')!;
@@ -23,7 +28,7 @@ export const Running2dGoobers = (canvas: HTMLCanvasElement) => {
       this.color = color;
       this.direction = this.getRandomDirection();
 
-      this.speed = Random.from(1, 3) / 10;
+      this.speed = getRandomInt(3) / 10;
     }
 
     blink = 0;
@@ -37,7 +42,7 @@ export const Running2dGoobers = (canvas: HTMLCanvasElement) => {
       const eyeSize = this.size * 0.6;
       const eyeOffset = eyeSize / 3;
 
-      const blink = Random.from(0, 50) == 5;
+      const blink = getRandomInt(50) == 5;
       if(blink){
         this.blink = 5;
       }
@@ -92,7 +97,7 @@ export const Running2dGoobers = (canvas: HTMLCanvasElement) => {
   const squares: Square[] = [];
 
 
-  const numSquares = 50;
+  const numSquares = 10;
   const squareSize = gridSize;
 
   for (let i = 0; i < numSquares; i++) {
