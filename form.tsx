@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Cube } from '../ui/widgets/cube.tsx';
+import { Cube } from '../cube.tsx';
 import { LoginBackground } from './bg.tsx';
 import { MonotoneBg } from './monotone.tsx';
-import { Button } from '../ui/widgets/button.tsx';
-import { Biomes } from '../repositories/biomes.ts';
+import { Button } from '../button.tsx';
 
 const LoginForm = ({ onSubmit, types = [] as any[] }) => {
   const [username, setUsername] = useState('');
